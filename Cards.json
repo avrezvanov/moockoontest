@@ -39,15 +39,15 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true,
+          "default": false,
           "databucketID": "",
           "bodyType": "INLINE"
         },
         {
           "uuid": "db5b285a-3b8e-4e10-bce8-fcf07abafa5d",
-          "body": "{}",
+          "body": "",
           "latency": 0,
-          "statusCode": 401,
+          "statusCode": 404,
           "label": "",
           "headers": [],
           "bodyType": "INLINE",
@@ -58,7 +58,7 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false
+          "default": true
         }
       ],
       "enabled": true,
@@ -188,7 +188,7 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true,
+          "default": false,
           "databucketID": "",
           "bodyType": "INLINE"
         },
@@ -212,7 +212,7 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false
+          "default": true
         }
       ],
       "enabled": true,
