@@ -1,0 +1,87 @@
+{
+  "uuid": "b3d5f956-a8bc-4830-b841-cd4e76d90006",
+  "lastMigration": 22,
+  "name": "Информация по кредитам",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3025,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "81ca978f-3c7c-4053-8f58-db9377d91427",
+      "documentation": "Получение кредитов клиента",
+      "method": "get",
+      "endpoint": "api/loans",
+      "responses": [
+        {
+          "uuid": "cb62a867-941d-4de6-9fa0-1c9c70c05e47",
+          "body": "[\n  {\n    \"shortProductName\": \"\",\n    \"dateOpen\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n    \"number\": \"\",\n    \"dateClose\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n    \"interestRate\": {{faker 'datatype.float'}},\n    \"currency\": \"\",\n    \"totalAmount\": {{faker 'datatype.float'}},\n    \"debtAmount\": {{faker 'datatype.float'}},\n    \"contractId\": \"\",\n    \"percentDebtAmount\": {{faker 'datatype.float'}},\n    \"status\": {{faker 'datatype.number'}},\n    \"unusedAmount\": {{faker 'datatype.float'}},\n    \"nextRepaymentDate\": \"{{faker 'date.recent' 365}}\",\n    \"nextRepaymentAmount\": {{faker 'datatype.float'}},\n    \"enabledPayDbo\": {{faker 'datatype.boolean'}},\n    \"enabledFromDbo\": {{faker 'datatype.boolean'}},\n    \"parentContract\": \"\",\n    \"accountNumber\": \"\",\n    \"bankBIC\": \"\",\n    \"contractTerm\": {{faker 'datatype.number'}},\n    \"scheduleType\": \"\",\n    \"fullName\": \"\",\n    \"type\": \"\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Ответ по кредитам клиента",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "d02802ba-b7ed-4121-8f29-d51d058146cb",
+          "body": "{\n  \"statusCode\": {{faker 'datatype.number'}},\n  \"detail\": \"\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Ответ по ошибке",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}
