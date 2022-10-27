@@ -1,6 +1,6 @@
 {
   "uuid": "b3d5f956-a8bc-4830-b841-cd4e76d90006",
-  "lastMigration": 22,
+  "lastMigration": 24,
   "name": "Информация по кредитам",
   "endpointPrefix": "",
   "latency": 0,
@@ -31,7 +31,9 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
         },
         {
           "uuid": "d02802ba-b7ed-4121-8f29-d51d058146cb",
@@ -51,6 +53,25 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        },
+        {
+          "uuid": "3d867281-b972-4be9-81f9-411d6587b0fd",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
           "default": false
         }
       ],
@@ -65,18 +86,25 @@
       "responses": [
         {
           "uuid": "3d021446-09df-47ad-a958-da294c54f506",
-          "body": "{Ok}",
+          "body": "[\n  {\n    \"shortProductName\": \"\",\n    \"contractTerm\": {{faker 'datatype.number'}},\n    \"scheduleType\": \"\",\n    \"fullName\": \"\",\n    \"type\": \"\"\n  }\n]",
           "latency": 0,
           "statusCode": 200,
           "label": "",
-          "headers": [],
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
           "filePath": "",
           "sendFileAsBody": false,
           "rules": [],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
         }
       ],
       "enabled": true,
@@ -108,5 +136,6 @@
       "key": "",
       "value": ""
     }
-  ]
+  ],
+  "data": []
 }
