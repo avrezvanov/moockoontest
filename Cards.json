@@ -4,9 +4,66 @@
   "name": "Карты",
   "endpointPrefix": "",
   "latency": 0,
-  "port": 3000,
+  "port": 3001,
   "hostname": "0.0.0.0",
   "routes": [
+    {
+      "uuid": "4029756d-9e04-4494-9e33-ff8b1b9994c5",
+      "documentation": "SMS сообщения по карте",
+      "method": "get",
+      "endpoint": "api/retail/cards/:Id/sms",
+      "responses": [
+        {
+          "uuid": "00555e98-9a92-4723-a114-67c61e1b1e52",
+          "body": "{\n  \"smstext\" : \"привет\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Ответ по SMS сообщениям по карте",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "Id",
+              "value": "123",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        },
+        {
+          "uuid": "db5b285a-3b8e-4e10-bce8-fcf07abafa5d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
     {
       "uuid": "e3752d9e-c539-4697-a387-53b12a2d895b",
       "documentation": "Итоговая выписка по карте",
@@ -100,46 +157,6 @@
       "responseMode": null
     },
     {
-      "uuid": "4029756d-9e04-4494-9e33-ff8b1b9994c5",
-      "documentation": "SMS сообщения по карте",
-      "method": "get",
-      "endpoint": "api/retail/cards/:Id/sms",
-      "responses": [
-        {
-          "uuid": "00555e98-9a92-4723-a114-67c61e1b1e52",
-          "body": "{\n  \"smstext\" : \"привет\"\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "Ответ по SMS сообщениям по карте",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            }
-          ],
-          "filePath": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "params",
-              "modifier": "Id",
-              "value": "123",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true,
-          "databucketID": "",
-          "bodyType": "INLINE"
-        }
-      ],
-      "enabled": true,
-      "responseMode": null
-    },
-    {
       "uuid": "eddc4ad4-540d-40c5-bb00-85eae1e40052",
       "documentation": "Блокировки карты",
       "method": "get",
@@ -159,13 +176,43 @@
           ],
           "filePath": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "Id",
+              "value": "333",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
           "bodyType": "INLINE"
+        },
+        {
+          "uuid": "b1ce2dac-7c4b-4a7f-b749-8aae67b6db67",
+          "body": "",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
         }
       ],
       "enabled": true,
