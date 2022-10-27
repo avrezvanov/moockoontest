@@ -1,0 +1,253 @@
+{
+  "uuid": "495e1f68-aa19-43f2-bb55-64887a90ecbc",
+  "lastMigration": 24,
+  "name": "Карты",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "6efe209e-15b5-4a5b-8b86-c44a154b514a",
+      "documentation": "Итоговая выписка по карте",
+      "method": "get",
+      "endpoint": "api/retail/cards/:Id/statements/total",
+      "responses": [
+        {
+          "uuid": "b6c3d51d-b028-46b5-a629-4b07e9fef6d3",
+          "body": "{\n  \"purchasesInterestRate\": 123,\n  \"withdrawCashInterestRate\": {{faker 'datatype.number'}},\n  \"fullCreditLimit\": {{faker 'datatype.number'}},\n  \"totalDebt\": {{faker 'datatype.number'}},\n  \"mainDebt\": {{faker 'datatype.number'}},\n  \"accuredInterest\": {{faker 'datatype.number'}},\n  \"availableCreditLimit\": {{faker 'datatype.number'}},\n  \"amountBlockedAndFeeTotal\": {{faker 'datatype.number'}},\n  \"ownAmount\": {{faker 'datatype.number'}},\n  \"payLimit\": {{faker 'datatype.number'}},\n  \"nextMandatoryPayment\": {{faker 'datatype.number'}},\n  \"gracePeriodAmount\": {{faker 'datatype.number'}},\n  \"nextPaymentDate\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n  \"previousPeriodDebtTotal\": {{faker 'datatype.number'}},\n  \"previousPeriodPurchasesDebt\": {{faker 'datatype.number'}},\n  \"previousPeriodWithdrawCashDebt\": {{faker 'datatype.number'}},\n  \"loanInterest\": {{faker 'datatype.number'}},\n  \"currentPeriodDebtTotal\": {{faker 'datatype.number'}},\n  \"currentPeriodPurchasesDebt\": {{faker 'datatype.number'}},\n  \"currentWithdrawCashDebt\": {{faker 'datatype.number'}},\n  \"gracePeriodInterest\": {{faker 'datatype.number'}},\n  \"endPeriodLoanInterest\": {{faker 'datatype.number'}},\n  \"bankContractDebtTotal\": {{faker 'datatype.number'}},\n  \"overdraftAmount\": {{faker 'datatype.number'}},\n  \"overdraftPenalty\": {{faker 'datatype.number'}},\n  \"stateDuty\": {{faker 'datatype.number'}},\n  \"productionCardFee\": {{faker 'datatype.number'}},\n  \"withdrawalCreditFee\": {{faker 'datatype.number'}},\n  \"withdrawalOwnFee\": {{faker 'datatype.number'}},\n  \"smsFee\": {{faker 'datatype.number'}},\n  \"rechargeFee\": {{faker 'datatype.number'}},\n  \"otherFee\": {{faker 'datatype.number'}},\n  \"missedPaymentAmount\": {{faker 'datatype.number'}},\n  \"missedPaymentAmountPenalty\": {{faker 'datatype.number'}},\n  \"unpaidFee\": {{faker 'datatype.number'}},\n  \"arrearsTotal\": {{faker 'datatype.number'}},\n  \"arrearsCash\": {{faker 'datatype.number'}},\n  \"arrearsPercent\": {{faker 'datatype.number'}},\n  \"arrearsPenalty\": {{faker 'datatype.number'}},\n  \"contractArrearsTotal\": {{faker 'datatype.number'}}\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Ответ по итоговой выписке по карты 123",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "Id",
+              "value": "123",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        },
+        {
+          "uuid": "9c73da6a-3887-4163-a509-85a47022ae67",
+          "body": "{\n  \"purchasesInterestRate\": 555,\n  \"withdrawCashInterestRate\": {{faker 'datatype.number'}},\n  \"fullCreditLimit\": {{faker 'datatype.number'}},\n  \"totalDebt\": {{faker 'datatype.number'}},\n  \"mainDebt\": {{faker 'datatype.number'}},\n  \"accuredInterest\": {{faker 'datatype.number'}},\n  \"availableCreditLimit\": {{faker 'datatype.number'}},\n  \"amountBlockedAndFeeTotal\": {{faker 'datatype.number'}},\n  \"ownAmount\": {{faker 'datatype.number'}},\n  \"payLimit\": {{faker 'datatype.number'}},\n  \"nextMandatoryPayment\": {{faker 'datatype.number'}},\n  \"gracePeriodAmount\": {{faker 'datatype.number'}},\n  \"nextPaymentDate\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n  \"previousPeriodDebtTotal\": {{faker 'datatype.number'}},\n  \"previousPeriodPurchasesDebt\": {{faker 'datatype.number'}},\n  \"previousPeriodWithdrawCashDebt\": {{faker 'datatype.number'}},\n  \"loanInterest\": {{faker 'datatype.number'}},\n  \"currentPeriodDebtTotal\": {{faker 'datatype.number'}},\n  \"currentPeriodPurchasesDebt\": {{faker 'datatype.number'}},\n  \"currentWithdrawCashDebt\": {{faker 'datatype.number'}},\n  \"gracePeriodInterest\": {{faker 'datatype.number'}},\n  \"endPeriodLoanInterest\": {{faker 'datatype.number'}},\n  \"bankContractDebtTotal\": {{faker 'datatype.number'}},\n  \"overdraftAmount\": {{faker 'datatype.number'}},\n  \"overdraftPenalty\": {{faker 'datatype.number'}},\n  \"stateDuty\": {{faker 'datatype.number'}},\n  \"productionCardFee\": {{faker 'datatype.number'}},\n  \"withdrawalCreditFee\": {{faker 'datatype.number'}},\n  \"withdrawalOwnFee\": {{faker 'datatype.number'}},\n  \"smsFee\": {{faker 'datatype.number'}},\n  \"rechargeFee\": {{faker 'datatype.number'}},\n  \"otherFee\": {{faker 'datatype.number'}},\n  \"missedPaymentAmount\": {{faker 'datatype.number'}},\n  \"missedPaymentAmountPenalty\": {{faker 'datatype.number'}},\n  \"unpaidFee\": {{faker 'datatype.number'}},\n  \"arrearsTotal\": {{faker 'datatype.number'}},\n  \"arrearsCash\": {{faker 'datatype.number'}},\n  \"arrearsPercent\": {{faker 'datatype.number'}},\n  \"arrearsPenalty\": {{faker 'datatype.number'}},\n  \"contractArrearsTotal\": {{faker 'datatype.number'}}\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Ответ по итоговой выписке по карты 555",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "Id",
+              "value": "555",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        },
+        {
+          "uuid": "7c14521c-b17b-4b56-9bb8-10fcbb3fbd4c",
+          "body": "",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "025eb494-c0cb-4baa-825c-f55f992216ee",
+      "documentation": "SMS сообщения по карте",
+      "method": "get",
+      "endpoint": "api/cards/:Id/sms",
+      "responses": [
+        {
+          "uuid": "14e32689-6e97-41d3-8ada-a2049a0574ba",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Ответ по SMS сообщениям по карте",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "9be5be84-1571-407f-bcb6-f938f811122e",
+      "documentation": "Блокировки карты",
+      "method": "get",
+      "endpoint": "api/cards/:Id/blockings",
+      "responses": [
+        {
+          "uuid": "9954da6e-4d73-4ebd-b5b6-2e4058b6953d",
+          "body": "{\n  \"items\": [\n    {\n      \"triggeredAt\": \"{{faker 'date.recent' 365}}\",\n      \"status\": \"{{oneOf (array 'CardBlocked (Карта заблокирована)' 'LostCardBlocked (Утерянная карта заблокирована)' 'StolenCardBlocked (Украденная карта заблокирована)' 'FraudAuthorizationDenied (Мошенничество. Отказ в авторизации)' 'AuthorizationDenied (Отказ в авторизации)' 'CardActived (Карта активна)' 'Unsupported (Неподдерживаемое значение)')}}\",\n      \"subject\": \"\",\n      \"comment\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Ответ по блокировкам",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "eff1dade-23e3-4fff-b6c5-464926fb3457",
+      "documentation": "Получение авторизаций по карте",
+      "method": "get",
+      "endpoint": "api/cards/:Id/authorizations",
+      "responses": [
+        {
+          "uuid": "c40b8d07-8694-4c15-9c2a-3341e1df2815",
+          "body": "{\n  \"items\": [\n    {\n      \"availableAmount\": {{faker 'datatype.number'}},\n      \"blockedAmount\": {{faker 'datatype.number'}},\n      \"operationAmount\": {{faker 'datatype.number'}},\n      \"startedAt\": \"{{faker 'date.recent' 365}}\",\n      \"finishedAt\": \"{{faker 'date.recent' 365}}\",\n      \"status\": \"\",\n      \"location\": \"\",\n      \"description\": \"\",\n      \"deviceNumber\": \"\",\n      \"sic\": \"\",\n      \"currency\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Ответ по авторизациям по карте",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "40e5cd47-7783-43eb-b041-cf8f6a3e938a",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "f9a9758e-a195-4393-86d4-3c50d9bbcea9",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
