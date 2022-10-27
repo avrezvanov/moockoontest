@@ -4,7 +4,7 @@
   "name": "Карты",
   "endpointPrefix": "",
   "latency": 0,
-  "port": 3001,
+  "port": 3003,
   "hostname": "0.0.0.0",
   "routes": [
     {
@@ -178,7 +178,7 @@
           "sendFileAsBody": false,
           "rules": [
             {
-              "target": "body",
+              "target": "params",
               "modifier": "Id",
               "value": "333",
               "invert": false,
