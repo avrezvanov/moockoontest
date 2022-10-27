@@ -15,7 +15,7 @@
       "responses": [
         {
           "uuid": "7f35e119-d597-48aa-bba2-6a78ca3d0a21",
-          "body": "",
+          "body": "{Ok}",
           "latency": 0,
           "statusCode": 200,
           "label": "Ответ по итоговой выписке по карты 555",
@@ -133,7 +133,7 @@
       "responses": [
         {
           "uuid": "b3f173ca-2d0f-43c6-868a-e31c030558ad",
-          "body": "",
+          "body": "{Ok}",
           "latency": 0,
           "statusCode": 200,
           "label": "Ответ по авторизациям по карте",
