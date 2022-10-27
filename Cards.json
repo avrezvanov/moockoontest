@@ -103,7 +103,7 @@
       "uuid": "4029756d-9e04-4494-9e33-ff8b1b9994c5",
       "documentation": "SMS сообщения по карте",
       "method": "get",
-      "endpoint": "api/cards/:Id/sms",
+      "endpoint": "api/retail/cards/:Id/sms",
       "responses": [
         {
           "uuid": "00555e98-9a92-4723-a114-67c61e1b1e52",
@@ -143,7 +143,7 @@
       "uuid": "eddc4ad4-540d-40c5-bb00-85eae1e40052",
       "documentation": "Блокировки карты",
       "method": "get",
-      "endpoint": "api/cards/:Id/blockings",
+      "endpoint": "api/retail/cards/:Id/blockings",
       "responses": [
         {
           "uuid": "1832bdca-8931-447d-b482-302e9588df58",
@@ -175,7 +175,7 @@
       "uuid": "9c091854-3999-40e6-9334-2f79f1c18055",
       "documentation": "Получение авторизаций по карте",
       "method": "get",
-      "endpoint": "api/cards/:Id/authorizations",
+      "endpoint": "api/retail/cards/:Id/authorizations",
       "responses": [
         {
           "uuid": "da13fc3e-46c8-4084-9929-d4758783ac01",
