@@ -1,0 +1,646 @@
+{
+  "uuid": "f4c4ca42-1ce8-4781-87d8-ddebea43598a",
+  "lastMigration": 24,
+  "name": "Abdt.Aimee.Way4Adapter.Web",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3004,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "87b7e942-8059-4438-9026-b6c3faadb1cc",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/accounts",
+      "responses": [
+        {
+          "uuid": "77b7b150-b92d-4539-b248-3903c7448d47",
+          "body": "{\n  \"items\": [\n    {\n      \"firstName\": \"1321\",\n      \"middleName\": \"\",\n      \"lastName\": \"\",\n      \"company\": \"\",\n      \"contractNumber\": \"\",\n      \"contractOpenDate\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"contractStatus\": \"\",\n      \"contractName\": \"\",\n      \"currency\": \"\",\n      \"contractExpireDate\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "0c19036a-edf6-476a-bbb2-f668d4b5a6b8",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/accounts/transactions",
+      "responses": [
+        {
+          "uuid": "50208fb5-7ec5-4587-914f-65383d0b1d78",
+          "body": "{\n  \"items\": [\n    {\n      \"company\": \"\",\n      \"inn\": \"\",\n      \"openDate\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"contractNumber\": \"\",\n      \"contractStatus\": \"\",\n      \"contractCurrency\": \"\",\n      \"cardFullName\": \"\",\n      \"smsInform\": \"\",\n      \"smsBalance\": \"\",\n      \"emailStatement\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "6112ccd3-d534-4d99-9bc6-e8bb356b0a1a",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/accounts/cashback",
+      "responses": [
+        {
+          "uuid": "61a592db-c46a-4583-88a3-0722d5b52ef6",
+          "body": "{\n  \"items\": [\n    {\n      \"transactionDate\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"transactionDetails\": \"\",\n      \"sicCode\": \"\",\n      \"transactionAmount\": {{faker 'datatype.float'}},\n      \"feeAmount\": {{faker 'datatype.float'}}\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "f2d9a014-d44f-42be-9b2e-5c6efbdd3177",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/accounts/operations",
+      "responses": [
+        {
+          "uuid": "a69ed9a3-fcfa-49ee-bad0-8fcc49084ad7",
+          "body": "{\n  \"items\": [\n    {\n      \"transactionDate\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"postingDate\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"transactionDetails\": \"\",\n      \"currency\": \"\",\n      \"transactionAmount\": {{faker 'datatype.float'}}\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "ddf42db4-5067-48f2-a585-6609e85e735b",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/accounts/balance",
+      "responses": [
+        {
+          "uuid": "454213ae-7250-49e3-9f29-3cecc20b60eb",
+          "body": "{\n  \"items\": [\n    {\n      \"dDay\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"balance\": {{faker 'datatype.float'}},\n      \"rate\": \"\",\n      \"deposit\": {{faker 'datatype.float'}}\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "7bb0bacd-6664-41af-ad88-f83a2f325417",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/corp/cards",
+      "responses": [
+        {
+          "uuid": "bcd8ce3c-cb5c-468f-8d67-5eed98423bf8",
+          "body": "{\n  \"items\": [\n    {\n      \"number\": \"\",\n      \"accountNumber\": \"\",\n      \"rate\": \"\",\n      \"currency\": \"\",\n      \"status\": \"\",\n      \"openedAt\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"closedAt\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"expiresAt\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"id\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "d592c20d-4cfd-4f18-b4e8-8b89576180aa",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/corp/cards/:Id",
+      "responses": [
+        {
+          "uuid": "f8bd4099-7cf0-4c2c-91d8-aaac302e9e88",
+          "body": "{\n  \"number\": \"\",\n  \"accountNumber\": \"\",\n  \"rate\": \"\",\n  \"currency\": \"\",\n  \"status\": \"\",\n  \"openedAt\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n  \"closedAt\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n  \"expiresAt\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n  \"paymentSystem\": \"\",\n  \"cardHolder\": {\n    \"firstName\": \"\",\n    \"lastName\": \"\"\n  },\n  \"productionStatus\": \"\",\n  \"isPaymentAbroadProhibited\": {{faker 'datatype.boolean'}},\n  \"isPaymentOnlineProhibited\": {{faker 'datatype.boolean'}},\n  \"isInGreyList\": {{faker 'datatype.boolean'}},\n  \"isSMSNotificationEnabled\": {{faker 'datatype.boolean'}},\n  \"issuerOrganization\": \"\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "f757afb5-2988-4f09-8e7b-bcfdace89f24",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/corp/cards/:Id/statements",
+      "responses": [
+        {
+          "uuid": "172c25d7-9584-4192-b070-564ccf951792",
+          "body": "{\n  \"items\": [\n    {\n      \"operationDateTime\": \"{{faker 'date.recent' 365}}\",\n      \"settlementDate\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"description\": \"\",\n      \"authorizationCode\": \"\",\n      \"operationAmount\": {{faker 'datatype.float'}},\n      \"feeAmount\": {{faker 'datatype.float'}},\n      \"totalAmount\": {{faker 'datatype.float'}},\n      \"currency\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "acc04493-595f-4c3b-b1ab-5dbcbde3792a",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/corp/cards/:Id/limits",
+      "responses": [
+        {
+          "uuid": "1dc045a8-afdc-498e-81c2-c9260d7ba882",
+          "body": "{\n  \"items\": [\n    {\n      \"type\": \"\",\n      \"name\": \"\",\n      \"status\": \"\",\n      \"startedAt\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"endedAt\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"maxOperationsNumber\": {{faker 'datatype.number'}},\n      \"currentOperationsNumber\": {{faker 'datatype.number'}},\n      \"maxTotalAmount\": {{faker 'datatype.float'}},\n      \"currentTotalAmount\": {{faker 'datatype.float'}},\n      \"maxSingleAmount\": {{faker 'datatype.float'}},\n      \"currency\": \"\",\n      \"renewalPeriod\": {\n        \"number\": {{faker 'datatype.number'}},\n        \"unit\": \"\"\n      }\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "5306c599-37aa-45b7-b138-2609476a5803",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/corp/cards/:Id/authorizations",
+      "responses": [
+        {
+          "uuid": "f6d6409f-0449-448d-b65b-0a1a1be43718",
+          "body": "{\n  \"items\": [\n    {\n      \"id\": \"\",\n      \"availableAmount\": {{faker 'datatype.float'}},\n      \"blockedAmount\": {{faker 'datatype.float'}},\n      \"operationAmount\": {{faker 'datatype.float'}},\n      \"status\": \"\",\n      \"location\": \"\",\n      \"description\": \"\",\n      \"sic\": \"\",\n      \"currency\": \"\",\n      \"deviceNumber\": \"\",\n      \"startedAt\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"finishedAt\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "57745977-7080-402b-89a2-b59e8f2f8295",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/corp/cards/authorizations/:AuthorizationId/events",
+      "responses": [
+        {
+          "uuid": "55965584-569d-4699-8512-0b071d2ed118",
+          "body": "{\n  \"items\": [\n    {\n      \"createdAt\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"summary\": \"\",\n      \"type\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "2dbd834c-7fdb-4b76-b9eb-24c52d0422a9",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/corp/cards/:Id/block",
+      "responses": [
+        {
+          "uuid": "4b9edee8-5a25-4f7b-adf4-9032f2355b28",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "2ad9c8cd-f1c7-47b9-b02b-6ea2e35a5d04",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/corp/cards/references/blocking-statuses",
+      "responses": [
+        {
+          "uuid": "d0fb58d7-3343-4a0a-87d1-3f74a864e178",
+          "body": "{\n  \"items\": [\n    {\n      \"id\": \"\",\n      \"summary\": \"\",\n      \"description\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "a89bd049-67d3-48aa-8cba-940aaad2ea0a",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/corp/cards/:Id/contracts/parameters",
+      "responses": [
+        {
+          "uuid": "a3ba3af3-b6e8-4d95-962a-1936d694564a",
+          "body": "{\n  \"items\": [\n    {\n      \"contractNumber\": \"\",\n      \"name\": \"\",\n      \"value\": {\n        \"current\": \"\",\n        \"previous\": \"\",\n        \"triggeredAt\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n        \"comment\": \"\"\n      }\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "d01d97f9-9328-4f43-94fb-1a1cf5d83328",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/corp/cards/:Id/blockings",
+      "responses": [
+        {
+          "uuid": "ec3353ed-89ef-4c14-9ea6-73336cbf8067",
+          "body": "{\n  \"items\": [\n    {\n      \"triggeredAt\": \"{{faker 'date.recent' 365}}\",\n      \"status\": \"\",\n      \"subject\": \"\",\n      \"comment\": \"\",\n      \"blocker\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "80cbe0d8-74b0-4b2d-97e9-b2850ae721e9",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/retail/cards/:Id/statements/total",
+      "responses": [
+        {
+          "uuid": "457f9c45-fc85-430f-b1d0-4f9a80c63037",
+          "body": "{\n  \"purchasesInterestRate\": {{faker 'datatype.float'}},\n  \"withdrawCashInterestRate\": {{faker 'datatype.float'}},\n  \"fullCreditLimit\": {{faker 'datatype.float'}},\n  \"totalDebt\": {{faker 'datatype.float'}},\n  \"mainDebt\": {{faker 'datatype.float'}},\n  \"accuredInterest\": {{faker 'datatype.float'}},\n  \"availableCreditLimit\": {{faker 'datatype.float'}},\n  \"amountBlockedAndFeeTotal\": {{faker 'datatype.float'}},\n  \"ownAmount\": {{faker 'datatype.float'}},\n  \"payLimit\": {{faker 'datatype.float'}},\n  \"nextMandatoryPayment\": {{faker 'datatype.float'}},\n  \"gracePeriodAmount\": {{faker 'datatype.float'}},\n  \"nextPaymentDate\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n  \"previousPeriodDebtTotal\": {{faker 'datatype.float'}},\n  \"previousPeriodPurchasesDebt\": {{faker 'datatype.float'}},\n  \"previousPeriodWithdrawCashDebt\": {{faker 'datatype.float'}},\n  \"loanInterest\": {{faker 'datatype.float'}},\n  \"currentPeriodDebtTotal\": {{faker 'datatype.float'}},\n  \"currentPeriodPurchasesDebt\": {{faker 'datatype.float'}},\n  \"currentWithdrawCashDebt\": {{faker 'datatype.float'}},\n  \"gracePeriodInterest\": {{faker 'datatype.float'}},\n  \"endPeriodLoanInterest\": {{faker 'datatype.float'}},\n  \"bankContractDebtTotal\": {{faker 'datatype.float'}},\n  \"overdraftAmount\": {{faker 'datatype.float'}},\n  \"overdraftPenalty\": {{faker 'datatype.float'}},\n  \"stateDuty\": {{faker 'datatype.float'}},\n  \"productionCardFee\": {{faker 'datatype.float'}},\n  \"withdrawalCreditFee\": {{faker 'datatype.float'}},\n  \"withdrawalOwnFee\": {{faker 'datatype.float'}},\n  \"smsFee\": {{faker 'datatype.float'}},\n  \"rechargeFee\": {{faker 'datatype.float'}},\n  \"otherFee\": {{faker 'datatype.float'}},\n  \"missedPaymentAmount\": {{faker 'datatype.float'}},\n  \"missedPaymentAmountPenalty\": {{faker 'datatype.float'}},\n  \"unpaidFee\": {{faker 'datatype.float'}},\n  \"arrearsTotal\": {{faker 'datatype.float'}},\n  \"arrearsCash\": {{faker 'datatype.float'}},\n  \"arrearsPercent\": {{faker 'datatype.float'}},\n  \"arrearsPenalty\": {{faker 'datatype.float'}},\n  \"contractArrearsTotal\": {{faker 'datatype.float'}}\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "95b76e2c-64ea-47ba-8e39-ce3d3c3b31a5",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/retail/cards/:Id/sms",
+      "responses": [
+        {
+          "uuid": "7e0217fa-ed23-434f-a704-fe5d8985d543",
+          "body": "{\n  \"items\": [\n    {\n      \"clientId\": \"\",\n      \"generatedEventDate\": \"{{date '2019' (now) 'yyyy-MM-dd'}}\",\n      \"eventName\": \"\",\n      \"sentEventDate\": \"{{faker 'date.recent' 365}}\",\n      \"status\": \"\",\n      \"messageText\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "d8bd7236-61a4-47a9-966c-9003cc8b2b87",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/retail/cards/:Id/authorizations",
+      "responses": [
+        {
+          "uuid": "6f1b0b18-3d85-4f82-bb96-648659d11d75",
+          "body": "{\n  \"items\": [\n    {\n      \"id\": \"\",\n      \"availableAmount\": {{faker 'datatype.float'}},\n      \"blockedAmount\": {{faker 'datatype.float'}},\n      \"operationAmount\": {{faker 'datatype.float'}},\n      \"status\": \"\",\n      \"location\": \"\",\n      \"description\": \"\",\n      \"sic\": \"\",\n      \"currency\": \"\",\n      \"rrn\": \"\",\n      \"receivedAt\": \"{{faker 'date.recent' 365}}\",\n      \"startedAt\": \"{{faker 'date.recent' 365}}\",\n      \"finishedAt\": \"{{faker 'date.recent' 365}}\",\n      \"transaction\": {\n        \"type\": \"\",\n        \"result\": \"\",\n        \"description\": \"\"\n      }\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "b5008826-b475-4f98-bf62-b5bd4361e98a",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/retail/cards/:Id/blockings",
+      "responses": [
+        {
+          "uuid": "e4262b36-0489-4001-aaf5-2701be254e27",
+          "body": "{\n  \"items\": [\n    {\n      \"triggeredAt\": \"{{faker 'date.recent' 365}}\",\n      \"status\": \"\",\n      \"subject\": \"\",\n      \"comment\": \"\",\n      \"blocker\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
